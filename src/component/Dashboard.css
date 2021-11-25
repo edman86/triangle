@@ -1,0 +1,17 @@
+.dashboard {
+    min-width: 400px;
+    min-height: 400px;
+    padding: 2em;
+    background-color: rgb(182, 209, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}

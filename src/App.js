@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import InputField from "./component/InputField";
+import ReverseButton from "./component/ReverseButton";
+import Dashboard from "./component/Dashboard";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [starsCount, setStarsCount] = useState(0);
+    const [isReversed, setReversed] = useState(false);
+
+    const handleInput = (e) => {
+        setStarsCount(e.target.value);
+    };
+
+    const handleClick = () => {
+        setReversed(!isReversed);
+    };
+
+    return (
+        <div className="App">
+            <InputField handleInput={handleInput} />
+            <Dashboard stars={starsCount} isReversed={isReversed} />
+            <ReverseButton handleClick={handleClick} />
+        </div>
+    );
 }
 
 export default App;
