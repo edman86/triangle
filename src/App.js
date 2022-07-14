@@ -21,6 +21,7 @@ function App() {
             <InputField handleInput={handleInput} />
             <Dashboard stars={starsCount} isReversed={isReversed} />
             <ReverseButton handleClick={handleClick} />
+            <button style={{color: 'red'}}>TEST BRANCH</button>
         </div>
     );
 }
