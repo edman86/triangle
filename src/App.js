@@ -23,6 +23,7 @@ function App() {
             <ReverseButton handleClick={handleClick} />
             <button style={{color: 'red'}}>RED BUTTON</button>
             <button style={{color: 'blue'}}>BLUE BUTTON</button>
+            <button style={{color: 'orange'}}>ORANGE BUTTON</button>
         </div>
     );
 }
